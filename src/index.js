@@ -9,7 +9,7 @@ sayHello('World');
 /**
  * require style imports
  */
-const {getMovies, addMovies, editMovies, deleteMovies} = require('./api.js');
+const {getMovies, addMovie, editMovie, deleteMovie} = require('./api.js');
 
 getMovies().then((movies) => {
   console.log('Here are all the movies:');
@@ -34,7 +34,6 @@ $('#movieSubmit').click(function () {
     'rating': $('#rating').val()
   };
 
-  addMovies(movie).then((movies) => {
-    getMovies(movies)
-  });
+  addMovie(movie).then(movie => getMovies());
 });
+
