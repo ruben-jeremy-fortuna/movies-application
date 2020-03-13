@@ -15,7 +15,7 @@ module.exports = {
   },
 
   editMovie: (id, movie) => {
-    return fetch('/api/movies', {
+    return fetch(`/api/movies/${id}`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',
