@@ -9,6 +9,31 @@
       "title": "Star Wars: A New Hope",
       "rating": "5",
       "id": 2
+    },
+    {
+      "title": "Casablanca 2",
+      "rating": "4",
+      "id": 4
+    },
+    {
+      "title": "Casablanca 2",
+      "rating": "4",
+      "id": 5
+    },
+    {
+      "title": "Casablanca 3 - the Blancaning",
+      "rating": "2",
+      "id": 6
+    },
+    {
+      "title": "",
+      "rating": "",
+      "id": 7
+    },
+    {
+      "title": "Telemetry is fun",
+      "rating": "5",
+      "id": 8
     }
   ]
 }

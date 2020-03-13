@@ -7,24 +7,42 @@
 </head>
 <body>
 
-    <div class="container">
-        <h1>Hello There!</h1>
-        <p>To get started, edit <code>src/index.js</code>.</p>
-    </div>
+<!--    <div class="container">-->
+<!--        <h1>Hello There!</h1>-->
+<!--        <p>To get started, edit <code>src/index.js</code>.</p>-->
+<!--    </div><br>-->
 
-    <div class="container">
+    <div class="container" style="margin-bottom: -300px;">
         <div id="output"></div>
     </div>
-
-
     <div class="container">
         <div>
             <label for="title">Movie title:<input id="title"></label><br>
             <label for="rating">Movie rating<input id="rating"></label><br>
             <button type="submit" id="movieSubmit">Click this to add your movie~</button>
         </div>
+    </div><br><br>
+
+
+    <div class="container">
+        <div>
+            <label for="editTitle">Movie to edit?<input id="editTitle"></label><br>
+            <label for="newTitle">New title(Leave blank if no change):<input id="newTitle"></label><br>
+            <label for="newRating">New rating(Leave blank if no change):<input id="newRating"></label><br>
+            <button type="submit" id="movieChange">Click this to alter the chosen movie~</button><br>
+        </div>
+        <div class="message" id="editMessage"></div>
     </div>
 
+
+
+<div class="container">
+    <div>
+        <label for="deleteTitle">Movie title:<input id="deleteTitle"></label><br>
+        <button type="submit" id="movieDelete">Click this to delete a movie</button>
+    </div>
+    <div class="message" id="deleteMessage"></div>
+</div>
 
 
 
