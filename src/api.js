@@ -1,6 +1,14 @@
 module.exports = {
   getMovies: () => {
-    return fetch('/api/movies')
+    return fetch(
+      '/api/movies',{
+      beforeSend: function () {
+        $(".loading").show();
+      },
+      complete: function () {
+        $(".loading").hide();
+      },
+    })
       .then(response => response.json());
   },
 

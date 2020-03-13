@@ -24,6 +24,11 @@
       "title": "lord of the rings",
       "rating": "10",
       "id": 10
+    },
+    {
+      "title": "Thing and stuff",
+      "rating": "1",
+      "id": 11
     }
   ]
 }
