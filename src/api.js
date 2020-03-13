@@ -4,10 +4,11 @@ module.exports = {
       .then(response => response.json());
   },
 
-  addMovies: () => {
+  addMovies: (movie) => {
     return fetch('/api/movies', {
-      method: 'post',
-      headers: 'Content-Type: application/json'
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify(movie)
     }).then(response => response.json());
   },
 
