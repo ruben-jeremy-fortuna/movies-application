@@ -3,13 +3,17 @@
 <head>
     <meta charset="UTF-8" />
     <title>My Application</title>
-    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 <body>
-
+<nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" href="#">The Movies</a>
+    <span><img src="../images/bbuster.png" height="50" width="50"/></span>
+</nav>
 
 <!--ADD MOVIE-->
+<<<<<<< HEAD
     <div class="container" style="margin-bottom: -250px">
         <div id="output"><span class="container loading">
             <h1>Hello There!</h1>
@@ -20,27 +24,27 @@
         <div>
             <label for="title">Movie title:<input id="title"></label><br>
             <label for="rating">Movie rating<input id="rating"></label><br>
-            <button type="submit" id="movieSubmit">Click this to add your movie~</button>
+            <button class="btn btn-primary" type="submit" id="movieSubmit">Click this to add your movie~</button>
         </div>
     </div><br><br>
 
 <!--EDIT MOVIES-->
-    <div class="container">
+    <div class="container-2">
         <div>
             <label for="editTitle">Movie to edit?<input id="editTitle"></label><br>
             <label for="newTitle">New title(Leave blank if no change):<input id="newTitle"></label><br>
             <label for="newRating">New rating(Leave blank if no change):<input id="newRating"></label><br>
-            <button type="submit" id="movieChange">Click this to alter the chosen movie~</button><br>
+            <button class="btn btn-primary" type="submit" id="movieChange">Click this to alter the chosen movie~</button><br>
         </div>
         <div class="message" id="editMessage"></div>
     </div>
 
 
 <!--DELETE MOVIE-->
-<div class="container">
+<div class="container-3">
     <div>
         <label for="deleteTitle">Movie title:<input id="deleteTitle"></label><br>
-        <button type="submit" id="movieDelete">Click this to delete a movie</button>
+        <button class="btn btn-primary" type="submit" id="movieDelete">Click this to delete a movie</button>
     </div>
     <div class="message" id="deleteMessage"></div>
 </div>
