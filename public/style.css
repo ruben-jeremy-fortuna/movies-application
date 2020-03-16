@@ -1,10 +1,17 @@
-html, body {
-    height: 100%;
+body {
+    display: grid;
+    grid-template-columns: repeat(9, 150px);
+    grid-template-rows: repeat(9, 150px);
+    background-color: dodgerblue;
 }
 
-.container {
-    position: relative;
-    top: 50%;
-    transform: translateY(-100%);
-    text-align: center;
+/*.container {*/
+/*    position: relative;*/
+/*    top: 50%;*/
+/*    transform: translateY(-100%);*/
+/*    text-align: center;*/
+/*}*/
+
+.navbar {
+    1/1/2/10
 }
