@@ -11,13 +11,16 @@ sayHello('World');
  * require style imports
  */
 const {getMovies, addMovie, editMovie, deleteMovie} = require('./api.js');
+// Output of function will append movies
 function editHtml () {
     getMovies().then((movies) => {
         $('#output').html(null);
         console.log('Here are all the movies:');
         movies.forEach(({title, rating, id}) => {
+
             console.log((`id# ${id} - ${title} - rating: ${rating}`));
-            $('#output').append(`<br> ${title} <br> rating: ${rating}<br>`);
+            $('#output').append(`<br> <h2> ${title} </h2><h5>rating: ${rating} <i class="nes-icon is-small star"></i></h5>`);
+
         });
     }).catch((error) => {
         alert('Oh no! Something went wrong.\nCheck the console for details.');
@@ -29,7 +32,8 @@ editHtml();
 $('#movieSubmit').click(function () {
   let movie = {
     title: $('#title').val(),
-    rating: $('#rating').val()
+    rating: $('#rating').val(),
+    genre: $('#genre').val()
   };
 
   addMovie(movie);
