@@ -71,14 +71,18 @@
     </div>
 
     <h2 class="title-select">SELECT A MOVIE</h2>
-<!--ADD MOVIE-->
-    <div class="container-0 card">
+
+
+
+    <!--ADD MOVIE-->
+    <div class="container-0">
         <p style="font-size: 38px">Your Selection:</p>
         <div id="output"><span class="container loading">
-            <img src="../images/loading.gif" height="350" width="350"/>
+            <img src="../images/pulse.svg" alt="">
+            <h1>LOADING</h1>
             <p>PLEASE STAND BY...
 
-<!--                <code>src/index.js</code>.</p>-->
+                <!--                <code>src/index.js</code>.</p>-->
         </span></div>
     </div>
 
@@ -86,37 +90,57 @@
 
     <div class="container-1">
         <div>
-            <label for="title">Movie Title:</label>
+            <label for="title">TITLE:</label>
             <input type="text" class="form-control" id="title" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
             <br>
-            <label for="rating">Movie Rating:</label>
+            <label for="rating">RATING:</label>
             <input type="text" class="form-control" id="rating" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
             <br>
-            <label for="rating">Movie Genre:</label>
+            <label for="rating">GENRE:</label>
             <input type="text" class="form-control" id="genre" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
             <br>
-            <button class="btn btn-primary" type="submit" id="movieSubmit">ADD MOVIE</button>
+            <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#additionModal" id="movieToSubmit">ADD MOVIE</button>
         </div>
     </div>
     <br><br>
 
-<!--EDIT MOVIES-->
+    <div class="modal fade" id="additionModal" tabindex="-1" role="dialog" aria-labelledby="Modal1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="movieAddModalTitle">Please confirm the movie's information</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <br>
+                    <label for="newTitle">TITLE: </label>
+                    <input type="text" class="form-control" id="addingTitle" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                    <br>
+                    <label for="newRating">RATING: </label>
+                    <input type="text" class="form-control" id="addingRating" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                    <br>
+                    <label for="newRating">GENRE: </label>
+                    <input type="text" class="form-control" id="addingGenre" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                    <br>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="movieSubmit" data-dismiss="modal">Add movie</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--EDIT MOVIES-->
     <div class="container-2">
         <div>
 
             <label for="editTitle">MOVIE EDIT:</label>
             <input type="text" class="form-control" id="editTitle" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-            <br>
-            <label for="newTitle">NEW TITLE: </label>
-            <input type="text" class="form-control" id="newTitle" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-            <br>
-            <label for="newRating">NEW RATING: </label>
-            <input type="text" class="form-control" id="newRating" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-            <br>
-            <label for="newRating">NEW GENRE: </label>
-            <input type="text" class="form-control" id="newGenre" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-            <br>
-            <button class="btn btn-primary" type="submit" id="movieChange">EDIT MOVIE</button>
+            <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#editModal" id="movieToEdit">EDIT MOVIE</button>
             <br>
 
         </div>
@@ -124,22 +148,87 @@
     </div>
 
 
-<!--DELETE MOVIE-->
-<div class="container-3">
-    <div>
-
-        <label for="deleteTitle">DELETE MOVIE:</label>
-        <br>
-        <input type="text" class="form-control" id="deleteTitle" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-        <br>
-        <button class="btn btn-primary" type="submit" id="movieDelete">DELETE MOVIE</button>
-
+    <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="Modal1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="movieEditModalTitle">Movie edit</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <br>
+                    <label for="newTitle">TITLE: </label>
+                    <input type="text" class="form-control" id="newTitle" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                    <br>
+                    <label for="newRating">RATING: </label>
+                    <input type="text" class="form-control" id="newRating" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                    <br>
+                    <label for="newRating">GENRE: </label>
+                    <input type="text" class="form-control" id="newGenre" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                    <br>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="movieChange" data-dismiss="modal">Save changes</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="message" id="deleteMessage"></div>
-</div>
 
 
 
+    <!--DELETE MOVIE-->
+    <div class="container-3">
+        <div>
+
+            <label for="deleteTitle">DELETE MOVIE:</label>
+            <br>
+            <input type="text" class="form-control" id="deleteTitle" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+            <br>
+            <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#deleteModal" id="movieToDelete">DELETE MOVIE</button>
+
+        </div>
+        <div class="message" id="deleteMessage"></div>
+    </div>
+
+    <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="Modal1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="movieDeleteModalTitle">Confirm this is the movie you wish to delete~</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <br>
+                    <label for="newTitle">TITLE: </label>
+                    <input type="text" class="form-control" id="delTitle" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" disabled>
+                    <br>
+                    <label for="newRating">RATING: </label>
+                    <input type="text" class="form-control" id="delRating" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" disabled>
+                    <br>
+                    <label for="newRating">GENRE: </label>
+                    <input type="text" class="form-control" id="delGenre" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" disabled>
+                    <br>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="movieDelete" data-dismiss="modal">Delete movie</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="./main.js"></script>
 </body>
 </html>
