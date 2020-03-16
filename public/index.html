@@ -63,8 +63,9 @@
 </head>
 <body>
     <div class="navbar bg-dark">
-        <h2 class="navbar-brand" style="color: white">The Draft House</h2>
-        <span><img src="images/bbuster.png" height="50" width="50"/></span>
+        <span><img src="../images/bbuster.png" height="50" width="50"/>
+            <h2 class="navbar-brand" style="color: white">The Draft House</h2>
+        </span>
     </div>
 
     <h2 class="title-select">SELECT A MOVIE</h2>
@@ -72,8 +73,7 @@
     <div class="container-0">
         <p style="font-size: 38px">Your Selection:</p>
         <div id="output"><span class="container loading">
-            <img src="../images/pulse.svg" alt="">
-            <h1>LOADING</h1>
+            <img src="../images/loading2.gif" height="350" width="350"/>
             <p>PLEASE STAND BY...
 
 <!--                <code>src/index.js</code>.</p>-->
@@ -90,9 +90,13 @@
             <label for="rating">Movie Rating:</label>
             <input type="text" class="form-control" id="rating" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
             <br>
+            <label for="rating">Movie Genre:</label>
+            <input type="text" class="form-control" id="genre" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+            <br>
             <button class="btn btn-primary" type="submit" id="movieSubmit">ADD MOVIE</button>
         </div>
-    </div><br><br>
+    </div>
+    <br><br>
 
 <!--EDIT MOVIES-->
     <div class="container-2">
@@ -106,6 +110,9 @@
             <br>
             <label for="newRating">NEW RATING: </label>
             <input type="text" class="form-control" id="newRating" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+            <br>
+            <label for="newRating">NEW GENRE: </label>
+            <input type="text" class="form-control" id="newGenre" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
             <br>
             <button class="btn btn-primary" type="submit" id="movieChange">EDIT MOVIE</button>
             <br>

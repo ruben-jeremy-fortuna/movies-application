@@ -10,16 +10,17 @@ sayHello('World');
 /**
  * require style imports
  */
+
 const {getMovies, addMovie, editMovie, deleteMovie} = require('./api.js');
+
 // Output of function will append movies
 function editHtml () {
     getMovies().then((movies) => {
         $('#output').html(null);
         console.log('Here are all the movies:');
-        movies.forEach(({title, rating, id}) => {
+        movies.forEach(({title, rating, genre, id}) => {
 
-            console.log((`id# ${id} - ${title} - rating: ${rating}`));
-            $('#output').append(`<br> <h2> ${title} </h2><h5>rating: ${rating} <i class="nes-icon is-small star"></i></h5>`);
+            $('#output').append(`<br> <h2> ${title} </h2><h5>rating: ${rating} / 10 <i class="nes-icon is-small star"></i></h5><h5>Genre: ${genre}</h5>`);
 
         });
     }).catch((error) => {
@@ -29,38 +30,38 @@ function editHtml () {
 }
 editHtml();
 
-$('#movieSubmit').click(function () {
-  let movie = {
-    title: $('#title').val(),
-    rating: $('#rating').val(),
-    genre: $('#genre').val()
-  };
+    $('#movieSubmit').click(function () {
+      let movie = {
+        title: $('#title').val(),
+        rating: $('#rating').val(),
+        genre: $('#genre').val()
+      };
+      addMovie(movie);
+      editHtml();
+    });
 
-  addMovie(movie);
-  editHtml();
-});
+    $('#movieChange').click(function(){
+        let movieEdit = {
+            title: $('#newTitle').val(),
+            rating: $('#newRating').val(),
+            genre: $('#genre').val()
+        };
+        let movieTitle = $('#editTitle').val();
+        getMovies()
+            .then(films => films.filter(film => film.title.toLowerCase() === movieTitle.toLowerCase()))
+            .then(item => {
+                editMovie(item[0].id, movieEdit);
+                editHtml();
+            });
+    });
 
-$('#movieChange').click(function(){
-    let movieEdit = {
-        title: $('#newTitle').val(),
-        rating: $('#newRating').val()
-    };
-    let movieTitle = $('#editTitle').val();
-    getMovies()
-        .then(films => films.filter(film => film.title.toLowerCase() === movieTitle.toLowerCase()))
-        .then(item => {
-            editMovie(item[0].id, movieEdit);
+    $('#movieDelete').click(function(){
+      let movie = $('#deleteTitle').val();
+     getMovies()
+          .then(films => films.filter(film => film.title.toLowerCase() === movie.toLowerCase()))
+          .then(item => {
+            deleteMovie(item[0].id);
             editHtml();
-        });
-});
-
-$('#movieDelete').click(function(){
-  let movie = $('#deleteTitle').val();
- getMovies()
-      .then(films => films.filter(film => film.title.toLowerCase() === movie.toLowerCase()))
-      .then(item => {
-        deleteMovie(item[0].id);
-        editHtml();
+          });
       });
-  });
 
