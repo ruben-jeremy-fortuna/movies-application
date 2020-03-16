@@ -29,6 +29,30 @@
       "rating": "9",
       "genre": "even cooler",
       "id": 19
+    },
+    {
+      "title": "big daddy",
+      "rating": "8",
+      "genre": "comedy",
+      "id": 20
+    },
+    {
+      "title": "the joker",
+      "rating": "10",
+      "genre": "haha",
+      "id": 21
+    },
+    {
+      "title": "big fat liar",
+      "rating": "10",
+      "genre": "comedy",
+      "id": 22
+    },
+    {
+      "title": "zombieland",
+      "rating": "10",
+      "genre": "comedy",
+      "id": 23
     }
   ]
 }

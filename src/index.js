@@ -20,8 +20,15 @@ function editHtml () {
         console.log('Here are all the movies:');
         movies.forEach(({title, rating, genre, id}) => {
 
-            $('#output').append(`<br> <h2> ${title} </h2><h5>rating: ${rating} / 10 <i class="nes-icon is-small star"></i></h5><h5>Genre: ${genre}</h5>`);
-
+            $('#output').append(
+                `<br>   
+                        <div class="single-movie">
+                        <h2> ${title} </h2>
+                        <h5>rating: ${rating} / 10 <i class="nes-icon is-small star"></i></h5>
+                        <h5>Genre: ${genre}</h5>
+                        </div>
+                <br>
+                `);
         });
     }).catch((error) => {
         alert('Oh no! Something went wrong.\nCheck the console for details.');
@@ -29,6 +36,7 @@ function editHtml () {
     });
 }
 editHtml();
+
 
     $('#movieSubmit').click(function () {
       let movie = {
@@ -39,8 +47,10 @@ editHtml();
       addMovie(movie);
       editHtml();
     });
+    let stars = movie.genre;
 
-    $('#movieChange').click(function(){
+
+$('#movieChange').click(function(){
         let movieEdit = {
             title: $('#newTitle').val(),
             rating: $('#newRating').val(),

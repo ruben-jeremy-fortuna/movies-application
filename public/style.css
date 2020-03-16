@@ -12,7 +12,7 @@ body {
 }
 .navbar-brand {
     font-family: 'Bebas Neue', cursive;
-    font-size: 48px;
+    color: whitesmoke;
 }
 
 .title-select {
@@ -23,12 +23,24 @@ body {
 
 /* movie list*/
 .container-0 {
-    grid-area: 2/9/13/13;
+    grid-area: 2/8/13/13;
     font-family: 'Bebas Neue', cursive;
     font-size: 32px;
     background-color: rgba(154, 154, 154, 0.13);
     padding: 10px;
     border: black 1px solid;
+}
+#output {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 20px;
+    justify-content: space-evenly;
+}
+
+#single-movie {
+    padding: 30px;
+    margin: 30px;
 }
 /* add movie */
 .container-1 {
