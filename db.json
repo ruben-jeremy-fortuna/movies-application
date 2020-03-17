@@ -7,46 +7,52 @@
       "id": 12
     },
     {
-      "title": "Friday the 13th",
+      "title": "FRIDAY THE 13TH",
       "rating": "9",
-      "genre": "horror",
+      "genre": "HORROR",
       "id": 14
     },
     {
-      "title": "jack and jill 2",
+      "title": "JACK AND JILL 2",
       "rating": "2",
-      "genre": "bad",
+      "genre": "BAD",
       "id": 16
     },
     {
-      "title": "die hard",
+      "title": "DIE HARD",
       "rating": "9",
-      "genre": "pretty cool",
+      "genre": "PRETTY COOL",
       "id": 18
     },
     {
-      "title": "die hard 2",
+      "title": "DIE HARD 2",
       "rating": "9",
-      "genre": "even cooler",
+      "genre": "EVEN COOLER",
       "id": 19
     },
     {
-      "title": "big daddy",
+      "title": "BIG DADDY",
       "rating": "8",
-      "genre": "comedy",
+      "genre": "COMEDY",
       "id": 20
     },
     {
-      "title": "the joker",
+      "title": "THE JOKER",
       "rating": "10",
-      "genre": "haha",
+      "genre": "HAHA",
       "id": 21
     },
     {
-      "title": "big fat liar",
+      "title": "BIG FAT LIAR",
       "rating": "10",
-      "genre": "comedy",
+      "genre": "COMEDY",
       "id": 22
+    },
+    {
+      "title": "ZOMBIELAND",
+      "rating": "10",
+      "genre": "COMEDY",
+      "id": 23
     },
     {
       "title": "TELLORIY",
@@ -55,10 +61,10 @@
       "id": 24
     },
     {
-      "title": "SPIDEMAN",
-      "rating": "8",
-      "genre": "ACTION",
-      "id": 26
+      "title": "101 DALMATIONS",
+      "rating": "10",
+      "genre": "CARTOON",
+      "id": 25
     }
   ]
 }

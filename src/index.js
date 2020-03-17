@@ -17,22 +17,27 @@ jQuery(document).ready(function($) {
 
     const {getMovies, addMovie, editMovie, deleteMovie} = require('./api.js');
 
-// Output of function will append movies
+    function output(value) {
+        value.forEach(({title, rating, genre, id}) => {
+            $('#output').append(
+                `<br>   
+                        <div class="single-movie">
+                        <h2> ${title} </h2>
+                        <h5>rating: ${rating} / 10 <i class="nes-icon is-small star"></i></h5>
+                        <h5>Genre: ${genre}</h5>
+                        </div>
+                <br>
+                `);
+        });
+    }
 
+
+// Output of function will append movies
     function editHtml() {
         getMovies().then((movies) => {
             $('#output').html(null);
             console.log('Here are all the movies:');
-            movies.forEach(({title, rating, genre, id}) => {
-                $('#output').append(
-                    `
-                        <div class="single-movie" style="padding: 10px;">
-                        <h2> ${title} </h2>
-                        <h6>rating: ${rating} / 10 <i class="nes-icon is-small star"></i></h6>
-                        <h6>Genre: ${genre}</h6>
-                        </div>
-                `);
-            });
+            output(movies);
             $("#movieToDelete, #movieToSubmit, #movieToEdit").attr("disabled", false);
         }).catch((error) => {
             alert('Oh no! Something went wrong.\nCheck the console for details.');
@@ -42,8 +47,10 @@ jQuery(document).ready(function($) {
 
     editHtml();
 
+
+
     $('#movieToSubmit').click(function () {
-        let title = $('#title').val().toUpperCase();
+        let title = $('#title').val().toString().toUpperCase();
         if(title !== ""){
             $('#addingTitle').val(title);
             $('#additionModal').modal('show');
@@ -173,6 +180,8 @@ jQuery(document).ready(function($) {
             genreCheck = false;
         }
 
+
+
     });
 
 
@@ -184,6 +193,7 @@ jQuery(document).ready(function($) {
                 $('#delTitle').val(item[0].title.toUpperCase());
                 $('#delRating').val(item[0].rating);
                 $('#delGenre').val(item[0].genre.toUpperCase());
+                $('#deleteModal').modal('show');
             }).catch(error => {
             $("#movieToDelete").attr("disabled", false);
             alert("Sorry, that movie isn't in the database!'")
@@ -202,5 +212,140 @@ jQuery(document).ready(function($) {
                 $('#deleteTitle').val("");
             });
     });
+
+    function compareTitleA(a, b){
+        const titleA = a.title;
+        const titleB = b.title;
+        let comparison = 0;
+        if (titleA.startsWith("THE ") && titleB.startsWith("THE ")){
+            if (titleA.charCodeAt(4) > titleB.charCodeAt(4)){
+                comparison = 1;
+            } else if (titleA.charCodeAt(4) < titleB.charCodeAt(4)) {
+                comparison = -1
+            }
+        } else if (titleA.charCodeAt(0) > titleB.charCodeAt(0)){
+            comparison = 1;
+        } else if (titleA.charCodeAt(0) < titleB.charCodeAt(0)){
+            comparison = -1
+        } else if (titleA.charCodeAt(0) === titleB.charCodeAt(0)){
+            if(titleA.charCodeAt(1) > titleB.charCodeAt(1)){
+                comparison = 1
+            } else if (titleA.charCodeAt(1) < titleB.charCodeAt(1)){
+                comparison = -1
+            }
+        }
+        return comparison;
+    }
+
+
+    function compareTitleD(a, b){
+        let comparison = compareTitleA(a, b);
+        return comparison * -1;
+    }
+
+    function compareRatingA(a, b){
+        const ratingA = parseInt(a.rating);
+        const ratingB = parseInt(b.rating);
+        let comparison = 0;
+        if(ratingA > ratingB){
+            comparison = 1
+        } else if (ratingA < ratingB){
+            comparison = -1;
+        } else if (ratingA === ratingB){
+            comparison = compareTitleA(a, b)
+        }
+        return comparison;
+    }
+
+    function compareRatingD(a, b){
+        let comparison = compareRatingA(a, b);
+        return comparison * -1;
+    }
+
+
+
+    function compareGenreA(a, b){
+        const genreA = a.genre;
+        const genreB = b.genre;
+
+        let comparison = 0;
+        if (genreA.charCodeAt(0) > genreB.charCodeAt(0)){
+            comparison = 1;
+        } else if (genreA.charCodeAt(0) < genreB.charCodeAt(0)){
+            comparison = -1
+        } else if (genreA.charCodeAt(0) === genreB.charCodeAt(0)){
+            if(genreA.charCodeAt(1) > genreB.charCodeAt(1)){
+                comparison = 1
+            } else if (genreA.charCodeAt(1) < genreB.charCodeAt(1)){
+                comparison = -1
+            }
+        }
+        return comparison;
+    }
+
+
+    function compareGenreD(a, b){
+        let comparison = compareGenreA(a, b);
+        return comparison * -1;
+    }
+
+
+
+
+
+
+
+
+    $('#ascendingTitle').click(function(){
+        getMovies().then((movies) => {
+            $('#output').html(null);
+            let moviesArray = movies.sort(compareTitleA);
+            output(moviesArray);
+        })
+    });
+
+    $('#descendingTitle').click(function(){
+        getMovies().then((movies) => {
+            $('#output').html(null);
+            let moviesArray = movies.sort(compareTitleD);
+            output(moviesArray);
+        })
+    });
+
+
+    $('#ascendingRating').click(function(){
+        getMovies().then((movies) => {
+            $('#output').html(null);
+            let moviesArray = movies.sort(compareRatingA);
+            output(moviesArray);
+        })
+    });
+
+    $('#descendingRating').click(function(){
+        getMovies().then((movies) => {
+            $('#output').html(null);
+            let moviesArray = movies.sort(compareRatingD);
+            output(moviesArray);
+        })
+    });
+
+
+    $('#ascendingGenre').click(function(){
+        getMovies().then((movies) => {
+            $('#output').html(null);
+            let moviesArray = movies.sort(compareGenreA);
+            output(moviesArray);
+        })
+    });
+
+    $('#descendingGenre').click(function(){
+        getMovies().then((movies) => {
+            $('#output').html(null);
+            let moviesArray = movies.sort(compareGenreD);
+            output(moviesArray);
+        })
+    });
+
+
 
 });
