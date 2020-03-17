@@ -49,16 +49,16 @@
       "id": 22
     },
     {
-      "title": "zombieland",
-      "rating": "10",
-      "genre": "comedy",
-      "id": 23
-    },
-    {
       "title": "TELLORIY",
       "rating": "3",
       "genre": "DOOM",
       "id": 24
+    },
+    {
+      "title": "SPIDEMAN",
+      "rating": "8",
+      "genre": "ACTION",
+      "id": 26
     }
   ]
 }

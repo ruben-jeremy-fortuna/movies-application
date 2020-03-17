@@ -1,14 +1,20 @@
 body {
     display: grid;
     grid-template-columns: repeat(12, 150px);
-    grid-template-rows: repeat(13, 100px);
+    grid-template-rows: repeat(11, 100px);
     font-family: 'Cuprum', sans-serif;
+    color: #2b2b2b;
 }
 
 
 .navbar {
     text-align: center;
-    grid-area: 1/1/2/13;
+    grid-area: 1/1/2/14;
+}
+#rate-movie {
+    text-align: left;
+    font-family: 'Bebas Neue', cursive;
+
 }
 .navbar-brand {
     font-family: 'Bebas Neue', cursive;
@@ -20,28 +26,33 @@ body {
     grid-area: 2/2/3/5;
     margin-top: 30px;
 }
-
+#your-selection {
+    grid-area: 2/5/3/7;
+    padding-left: 25px;
+}
 /* movie list*/
+/*Card*/
 .container-0 {
-    grid-area: 2/5/13/13;
+    grid-area: 2/5/9/11;
     font-family: 'Bebas Neue', cursive;
     font-size: 32px;
-    background-color: rgba(154, 154, 154, 0.13);
-    padding: 10px;
-    border: black 1px solid;
+    margin: 20px;
 }
+
 #output {
+    grid-area: 3/5/8/9;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    padding: 20px;
-    justify-content: space-evenly;
 }
 
 #single-movie {
-    padding: 30px;
-    margin: 30px;
+
 }
+.modal {
+    font-family: 'Cuprum', sans-serif;
+}
+
 /* add movie */
 .container-1 {
     grid-area: 3/2/4/4;
@@ -62,4 +73,11 @@ body {
     font-family: 'Cuprum', sans-serif;
     font-size: 20px;
 
+}
+.sonk {
+    font-family: 'Bebas Neue', cursive;
+    width: 400px;
+    height: 800px;
+    grid-area: 2/11/6/12;
+    padding-top: 20px;
 }

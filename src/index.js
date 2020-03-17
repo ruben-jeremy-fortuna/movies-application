@@ -25,13 +25,12 @@ jQuery(document).ready(function($) {
             console.log('Here are all the movies:');
             movies.forEach(({title, rating, genre, id}) => {
                 $('#output').append(
-                    `<br>   
-                        <div class="single-movie">
+                    `
+                        <div class="single-movie" style="padding: 10px;">
                         <h2> ${title} </h2>
-                        <h5>rating: ${rating} / 10 <i class="nes-icon is-small star"></i></h5>
-                        <h5>Genre: ${genre}</h5>
+                        <h6>rating: ${rating} / 10 <i class="nes-icon is-small star"></i></h6>
+                        <h6>Genre: ${genre}</h6>
                         </div>
-                <br>
                 `);
             });
             $("#movieToDelete, #movieToSubmit, #movieToEdit").attr("disabled", false);
@@ -173,8 +172,6 @@ jQuery(document).ready(function($) {
             ratingCheck = false;
             genreCheck = false;
         }
-
-
 
     });
 
