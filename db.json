@@ -1,9 +1,9 @@
 {
   "movies": [
     {
-      "title": "The Wicker Man",
-      "rating": "10",
-      "genre": "horror",
+      "title": "THE WICKER MAN",
+      "rating": "5",
+      "genre": "HORROR",
       "id": 12
     },
     {
@@ -53,6 +53,12 @@
       "rating": "10",
       "genre": "comedy",
       "id": 23
+    },
+    {
+      "title": "TELLORIY",
+      "rating": "3",
+      "genre": "DOOM",
+      "id": 24
     }
   ]
 }
