@@ -21,7 +21,7 @@ jQuery(document).ready(function($) {
         });
         $('.btn').attr("disabled", false);
     }
-    $('.btn').hover(
+    $('.usebtn').hover(
         function () {
             $(this).css('transform','scale(1.1)');
         },
