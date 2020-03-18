@@ -37,13 +37,18 @@ body {
     font-family: 'Bebas Neue', cursive;
     font-size: 32px;
     margin: 20px;
+    overflow-y: auto;
+    height: 100%;
+    border: transparent;
 }
 
 #output {
     grid-area: 3/5/8/9;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
+    width: auto;
+    height: auto;
 }
 
 #single-movie {
