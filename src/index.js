@@ -20,13 +20,13 @@ jQuery(document).ready(function($) {
     function output(value) {
         value.forEach(({title, rating, genre, id}) => {
             $('#output').append(
-                `<br>   
+                `   
                         <div class="single-movie">
                         <h2> ${title} </h2>
                         <h5>rating: ${rating} / 10 <i class="nes-icon is-small star"></i></h5>
                         <h5>Genre: ${genre}</h5>
                         </div>
-                <br>
+                
                 `);
         });
     }
