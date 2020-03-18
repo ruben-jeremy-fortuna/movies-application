@@ -17,21 +17,29 @@ jQuery(document).ready(function($) {
 
     const {getMovies, addMovie, editMovie, deleteMovie} = require('./api.js');
 
+
     function output(value) {
         value.forEach(({title, rating, genre, id}) => {
             $('#output').append(
                 `  
                         <div class="single-movie card">
-                        <div class="card-body"><h2> ${title} </h2>
-                        <h5>rating: ${rating} / 10 <i class="nes-icon is-small star"></i></h5>
-                        <h5>Genre: ${genre}</h5>
+                        <div class="card-body"><h2 style="color: #ffc901"> ${title} </h2>
+                        <h5>rating: <span style="font-family: 'Cuprum', sans-serif; font-size: 18px;">${rating} / 10 <i class="nes-icon is-small star"></i></span></h5>
+                        <h5>Genre: <span style="font-family: 'Cuprum', sans-serif; font-size: 18px;">${genre}</span></h5>
                         </div>
                         </div>
                
                 `);
         });
     }
-
+    $('.btn').hover(
+        function () {
+            $(this).css('transform','scale(1.1)');
+        },
+        function () {
+            $(this).css('transform','scale(1)');
+        }
+    );
 
 // Output of function will append movies
     function editHtml() {
@@ -180,7 +188,6 @@ jQuery(document).ready(function($) {
             ratingCheck = false;
             genreCheck = false;
         }
-
 
 
     });
