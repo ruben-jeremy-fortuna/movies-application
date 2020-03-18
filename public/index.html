@@ -70,25 +70,39 @@
         <span>
             <img src="../images/movie-logo.png" height="50" width="50" style="margin-bottom: 30px"/>
             <h2 class="navbar-brand" style="font-size: 48px">The Draft House</h2>
-            <p class="navbar-brand" id="rate-movie"> <span style="font-family: 'Cuprum', sans-serif; font-size: 18px;">Come and rate a movie</span></p>
+            <p class="navbar-brand" id="rate-movie"> <span style="font-family: 'Cuprum', sans-serif; font-size: 18px;">Your Own Personal Movieland</span></p>
         </span>
     </div>
 
 
-    <div class="container-4">
-        <h3><div id="choice"></div></h3>
-        <div class="btn-group">
-            <button type="button" class="btn btn-warning btn-md">Movie Sort</button>
-            <button type="button" class="btn btn-secondary btn-md dropdown-toggle dropdown-toggle-split" id="movieSort" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-reference="parent">
-                <span class="sr-only">Toggle Dropdown</span>
-            </button>
-            <div class="dropdown-menu" aria-labelledby="movieSort">
-                <button class="dropdown-item" type="button" id="ascendingTitle">Ascending Titles</button>
-                <button class="dropdown-item" type="button" id="descendingTitle">Descending Titles</button>
-                <button class="dropdown-item" type="button" id="ascendingRating">Ascending (0-10) Ratings)</button>
-                <button class="dropdown-item" type="button" id="descendingRating">Descending (10-0) Ratings)</button>
-                <button class="dropdown-item" type="button" id="ascendingGenre">Ascending Genres</button>
-                <button class="dropdown-item" type="button" id="descendingGenre">Descending Genres</button>
+    <div class="container-4 mt-1">
+        <div class="input-group">
+            <input type="text" class="form-control" id="search" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Search for tonight's flick here">
+            <div class="input-group-append">
+                <button type="button" class="btn btn-warning btn-md" id="choice2">Search by Title</button>
+                <button type="button" class="btn btn-secondary btn-md dropdown-toggle dropdown-toggle-split" id="movieSearch" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-reference="parent">
+                    <span class="sr-only">Toggle Dropdown</span>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="movieSearch">
+                    <button class="dropdown-item" type="button" id="searchTitleButton">Search by Title</button>
+                    <button class="dropdown-item" type="button" id="searchRatingButton">Search by Rating</button>
+                    <button class="dropdown-item" type="button" id="searchGenreButton">Search by Genre</button>
+                </div>
+            </div>
+            <div class="input-group-append">
+                <button type="button" class="btn btn-warning btn-md" id="choice">Movie Sort Options</button>
+                <button type="button" class="btn btn-secondary btn-md dropdown-toggle dropdown-toggle-split" id="movieSort" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-reference="parent">
+                    <span class="sr-only">Toggle Dropdown</span>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="movieSort">
+                    <button class="dropdown-item" type="button" id="ascendingTitle">Ascending Titles</button>
+                    <button class="dropdown-item" type="button" id="descendingTitle">Descending Titles</button>
+                    <button class="dropdown-item" type="button" id="ascendingRating">Ascending (0-10) Ratings)</button>
+                    <button class="dropdown-item" type="button" id="descendingRating">Descending (10-0) Ratings)</button>
+                    <button class="dropdown-item" type="button" id="ascendingGenre">Ascending Genres</button>
+                    <button class="dropdown-item" type="button" id="descendingGenre">Descending Genres</button>
+                    <button class="dropdown-item" type="button" id="sortReset">Clear Sort Option</button>
+                </div>
             </div>
         </div>
     </div>
@@ -100,7 +114,7 @@
 
     <!--ADD MOVIE-->
     <div class="container-0 card">
-        <p style="font-size: 38px" id="your-selection">Your Selection:</p>
+        <p style="font-size: 38px; margin-bottom: 35px" id="your-selection"></p>
         <div class="card-body row-cols-1 row-cols-md-3" id="output"><span class="container loading">
             <img src="../images/pulse1.svg" alt="">
             <h1>LOADING</h1>

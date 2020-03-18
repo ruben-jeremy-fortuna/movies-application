@@ -1,8 +1,8 @@
 @media screen and (min-width:960px) and (max-width:2100px) {
     body {
         display: grid;
-        grid-template-columns: repeat(12, 150px);
-        grid-template-rows: repeat(11, 100px);
+        grid-template-columns: repeat(11, 150px);
+        grid-template-rows: repeat(8, 100px);
         font-family: 'Cuprum', sans-serif;
         color: #2b2b2b;
     }
@@ -10,7 +10,7 @@
 
     .navbar {
         text-align: center;
-        grid-area: 1/1/2/14;
+        grid-area: 1/1/2/13;
     }
 
     #rate-movie {
@@ -40,7 +40,7 @@
     /* movie list*/
     /*Card*/
     .container-0 {
-        grid-area: 2/4/9/10;
+        grid-area: 2/3/9/9;
         font-family: 'Bebas Neue', cursive;
         font-size: 32px;
         margin: 20px;
@@ -94,13 +94,13 @@
         font-family: 'Bebas Neue', cursive;
         width: 400px;
         height: 800px;
-        grid-area: 2/10/6/11;
+        grid-area: 2/9/6/10;
         padding-top: 20px;
         padding-left: 30px;
     }
 
     .container-4 {
-        grid-area: 2/9/3/10;
+        grid-area: 2/4/3/8;
         font-family: 'Cuprum', sans-serif;
         font-size: 10px;
         z-index: 1;
