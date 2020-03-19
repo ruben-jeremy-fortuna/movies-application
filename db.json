@@ -4,193 +4,115 @@
       "title": "THE WICKER MAN",
       "rating": "5",
       "genre": "HORROR",
-      "id": 12
+      "id": 1
     },
     {
       "title": "FRIDAY THE 13TH",
       "rating": "9",
       "genre": "HORROR",
-      "id": 14
+      "id": 2
     },
     {
       "title": "JACK AND JILL 2",
       "rating": "2",
       "genre": "BAD",
-      "id": 16
+      "id": 3
     },
     {
       "title": "DIE HARD",
       "rating": "9",
       "genre": "PRETTY COOL",
-      "id": 18
+      "id": 4
     },
     {
       "title": "DIE HARD 2",
       "rating": "9",
       "genre": "EVEN COOLER",
-      "id": 19
+      "id": 5
     },
     {
       "title": "BIG DADDY",
       "rating": "8",
       "genre": "COMEDY",
-      "id": 20
+      "id": 6
     },
     {
       "title": "THE JOKER",
       "rating": "10",
-      "genre": "HAHA",
-      "id": 21
+      "genre": "HAHAHA",
+      "id": 7
     },
     {
       "title": "BIG FAT LIAR",
-      "rating": "10",
+      "rating": "2",
       "genre": "COMEDY",
-      "id": 22
-    },
-    {
-      "title": "TELLORIY",
-      "rating": "3",
-      "genre": "DOOM",
-      "id": 24
+      "id": 8
     },
     {
       "title": "101 DALMATIONS",
       "rating": "10",
       "genre": "CARTOON",
-      "id": 25
+      "id": 10
     },
     {
-      "title": "THE WICKER MAN",
-      "rating": "5",
+      "title": "JASON VS FREDDY",
+      "rating": "8",
+      "genre": "HORROR",
+      "id": 11
+    },
+    {
+      "title": "13 CLOVERFIELD LANE",
+      "rating": "7",
       "genre": "HORROR",
       "id": 12
     },
     {
-      "title": "FRIDAY THE 13TH",
+      "title": "JACK AND JILL",
+      "rating": "4",
+      "genre": "BAD",
+      "id": 13
+    },
+    {
+      "title": "DIE HARD 3",
       "rating": "9",
-      "genre": "HORROR",
+      "genre": "PRETTY COOL",
       "id": 14
     },
     {
-      "title": "JACK AND JILL 2",
-      "rating": "2",
-      "genre": "BAD",
+      "title": "STAR WARS: A NEW HOPE",
+      "rating": "9",
+      "genre": "SCIFI",
+      "id": 15
+    },
+    {
+      "title": "THE SECRET OF NIMH",
+      "rating": "8",
+      "genre": "CARTOON",
       "id": 16
     },
     {
-      "title": "DIE HARD",
-      "rating": "9",
-      "genre": "PRETTY COOL",
+      "title": "SONIC THE HEDGEHOG",
+      "rating": "10",
+      "genre": "CARTOON",
+      "id": 17
+    },
+    {
+      "title": "AIRPLANE",
+      "rating": "10",
+      "genre": "COMEDY",
       "id": 18
     },
     {
-      "title": "DIE HARD 2",
-      "rating": "9",
-      "genre": "EVEN COOLER",
+      "title": "BLAZING SADDLES",
+      "rating": "10",
+      "genre": "COMEDY",
       "id": 19
     },
     {
-      "title": "BIG DADDY",
-      "rating": "8",
-      "genre": "COMEDY",
+      "title": "DADA",
+      "rating": "10",
+      "genre": "DALE",
       "id": 20
-    },
-    {
-      "title": "THE JOKER",
-      "rating": "10",
-      "genre": "HAHA",
-      "id": 21
-    },
-    {
-      "title": "BIG FAT LIAR",
-      "rating": "10",
-      "genre": "COMEDY",
-      "id": 22
-    },
-    {
-      "title": "ZOMBIELAND",
-      "rating": "10",
-      "genre": "COMEDY",
-      "id": 23
-    },
-    {
-      "title": "TELLORIY",
-      "rating": "3",
-      "genre": "DOOM",
-      "id": 24
-    },
-    {
-      "title": "101 DALMATIONS",
-      "rating": "10",
-      "genre": "CARTOON",
-      "id": 25
-    },
-    {
-      "title": "THE WICKER MAN",
-      "rating": "5",
-      "genre": "HORROR",
-      "id": 12
-    },
-    {
-      "title": "FRIDAY THE 13TH",
-      "rating": "9",
-      "genre": "HORROR",
-      "id": 14
-    },
-    {
-      "title": "JACK AND JILL 2",
-      "rating": "2",
-      "genre": "BAD",
-      "id": 16
-    },
-    {
-      "title": "DIE HARD",
-      "rating": "9",
-      "genre": "PRETTY COOL",
-      "id": 18
-    },
-    {
-      "title": "DIE HARD 2",
-      "rating": "9",
-      "genre": "EVEN COOLER",
-      "id": 19
-    },
-    {
-      "title": "BIG DADDY",
-      "rating": "8",
-      "genre": "COMEDY",
-      "id": 20
-    },
-    {
-      "title": "THE JOKER",
-      "rating": "10",
-      "genre": "HAHA",
-      "id": 21
-    },
-    {
-      "title": "BIG FAT LIAR",
-      "rating": "10",
-      "genre": "COMEDY",
-      "id": 22
-    },
-    {
-      "title": "ZOMBIELAND",
-      "rating": "10",
-      "genre": "COMEDY",
-      "id": 23
-    },
-    {
-      "title": "TELLORIY",
-      "rating": "3",
-      "genre": "DOOM",
-      "id": 24
-    },
-    {
-      "title": "101 DALMATIONS",
-      "rating": "10",
-      "genre": "CARTOON",
-      "id": 25
     }
   ]
 }
