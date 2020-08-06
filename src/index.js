@@ -4,9 +4,6 @@
  */
 const $ = require('jquery');
 
-import sayHello from './hello';
-sayHello('World');
-
 /**
  * require style imports
  */
